@@ -1,0 +1,17 @@
+Game will have an initial screen that will prompt users to select a category.
+Users will be able to pick from various different trivia categories. There will also be a random category which will pull in question from all the categories.
+Selecting questions from both the categories and random will use a random number generator.
+The random number generator will generate a number that pulls a question from an array of questions.
+
+Once the user select a category a question will appear on screen and a timer will begin (time permitting [no pun intnded]).
+Each question will have three potential answers to the question making it a multiple choice game. When an answer is selected the user will be informed if their question is correct or incorrect.
+
+A correct answer will result in the user moving to the next question and having 10 points added to their score. A incorrect answer will result in the selected answer turning red and no points added.
+If the answer is incorrect the user will need to press a "next" button to proceed the following question.
+
+After a total of 10 questions have been answered the user will see a screen congratulating them for making it to the end of the quiz informing them of their score, the time, and how many questions were right/wrong.
+
+User will be able to replay the same quiz or return to the main menu to select a new quiz category.
+
+Some things that will needed to be created to reach MVP:
+Functions that initialize the game, selects questions, keeps score, ensures questions are not repeated, and lets users know after the game is over.
