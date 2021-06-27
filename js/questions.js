@@ -1,18 +1,23 @@
 function getRandomMovieQuestion() {
-    return movieTrivia[Math.floor(Math.random() * (movieTrivia.length - 1))]
+    return movieTrivia[Math.floor(Math.random() * (movieTrivia.length - 1))] // This should generate a random movie question.
 }
 
 function getRandomCodingQuestion() {
-    return codingTrivia[Math.floor(Math.random() * (codingTivia.length - 1))]
+    return codingTrivia[Math.floor(Math.random() * (codingTivia.length - 1))] // This should generate a random coding question.
 }
 
 function getRandomHistoryQuestion() {
-    return historyTrivia[Math.floor(Math.random() * (historyTrivia.length - 1))]
+    return historyTrivia[Math.floor(Math.random() * (historyTrivia.length - 1))] // This should generate a random history question.
 }
 
 function getRandomScienceQuestion() {
-    return scienceTrivia[Math.floor(Math.random() * (scienceTrivia.length - 1))]
+    return scienceTrivia[Math.floor(Math.random() * (scienceTrivia.length - 1))] // This should generate a random science question.
 }
+
+function getRandomQuestion() {
+    return randomTrivia[Math.floor(Math.random() * (scienceTrivia.length - 1))] // This should generate a random question from the large array
+}
+
 
 const movieTrivia = [
     'In the matrix does Neo take the blue pill or the red pill?',
@@ -25,7 +30,7 @@ const movieTrivia = [
     "Who directed Titanic, Avatar, and Terminator?",
     "Who is the main antagonist from the Harry Potter series?",
     "Which Indianna Jone's movie starred Shia Labeouf?"
-]
+] // Array of movie questions.
 
 const codingTrivia = [
     'What year was the first computer virus created in?',
@@ -38,7 +43,7 @@ const codingTrivia = [
     'Which of the following languages is not a frontend language?',
     'Which of the following tags denotes a header in HTML',
     'What is the most popular coding language in the world according to GitHub?'
-]
+] // Array of coding questions.
 
 const historyTrivia = [
     'What was the first sport played on the Moon?',
@@ -51,7 +56,7 @@ const historyTrivia = [
     'During the Cold War what beverage company had the 7th largest Navy in the world?',
     'In 1932 Australia declared war against what type of bird?',
     'What was the crown at the Empire State Building originally for?'
-]
+] // Array of history question.
 
 const scienceTrivia = [
     'What is the second element on the periodic table?',
@@ -64,7 +69,7 @@ const scienceTrivia = [
     'How many new species are discovered each year on average?',
     'How many eggs does a queen bee lay in a day?',
     'How fast does a skydiving person fall when they hit terminal velocity?'
-]
+] // Array of scient questions.
 
 const randomTrivia = [
     'In the matrix does Neo take the blue pill or the red pill?',
@@ -107,11 +112,11 @@ const randomTrivia = [
     'How many new species are discovered each year on average?',
     'How many eggs does a queen bee lay in a day?',
     'How fast does a skydiving person fall when they hit terminal velocity?'
-]
+] // Array that has all the questions in it.
 
 export {
     getRandomMovieQuestion,
     getRandomCodingQuestion,
     getRandomHistoryQuestion,
     getRandomScienceQuestion
-  }
+  } // Exporting the functions at the top of the page to my main JS page so that I can use/call them there.
