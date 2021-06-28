@@ -20,17 +20,57 @@ function getRandomQuestion() {
 
 
 const movieTrivia = [
-    'In the matrix does Neo take the blue pill or the red pill?',
-    'Who played Forest Gump in the movie Forest Gump?',
-    'Who did Rose tell she would never let go in Titanic(immediately before letting go)?',
-    "How many suns does Luke's home plannet of Tatoine have?",
-    "What movie has the record for most 'F-Bombs' in a single move?",
-    "What character in Monty Python famously says 'Tis just a flesh wound?'",
-    "What is the name of the movie about the Jamaican Bobsled team?",
-    "Who directed Titanic, Avatar, and Terminator?",
-    "Who is the main antagonist from the Harry Potter series?",
-    "Which Indianna Jone's movie starred Shia Labeouf?"
-] // Array of movie questions.
+    { 
+        question: 'In the matrix does Neo take the blue pill or the red pill?',
+        options: ['Red','Blue','Neither'],
+        answer: '1'},
+    
+    {
+        question: 'Who played Forest Gump in the movie Forest Gump?',
+        options: ['Robin Williams', 'Tom Hanks', 'Robert De Niro'],
+        answer: '2'},
+
+    {
+        question: 'Who did Rose tell she would never let go in Titanic(immediately before letting go)?',
+        options: ['Jack', 'Bill', 'Frank'],
+        answer: '1'},
+    
+    {
+        question: "How many suns does Luke's home plannet of Tatoine have?",
+        options: ['1', '2', '4'],
+        answer: '2'},
+
+    {
+        questions: "What movie has the record for most 'F-Bombs' in a single move?",
+        options: ['Uncut Gems', 'End of Watch', 'Wolf of Wall Street'],
+        answer: '3'},
+    
+    {
+        question: "What character in Monty Python famously says 'Tis but a scratch?'",
+        options: ['The Black Knight', 'Lancelot', 'The Green Knight'],
+        answer: '1'},
+    
+
+    {
+        question: 'What is the name of the movie about the Jamaican Bobsled team?',
+        options: ['Bobsled: The Dream', 'The Challenge', 'Cool Runnings'],
+        answer: '3'},
+    
+    {
+        question: "Who directed Titanic, Avatar, and Terminator?",
+        options: ['Steven Spielberg', 'James Cameron', 'Michael Bay'],
+        answer: '2'},
+
+    {
+        question: 'Who is the main antagonist from the Harry Potter series?',
+        options: ['Voldemort', 'Harry Potter', 'Dumbledore'],
+        answer: '1'},
+    
+    {
+        question: "Which Indianna Jone's movie starred Shia Labeouf?",
+        options: ['Raiders of the Lost Ark', 'Kingdom of the Crystal Skull', 'The Last Crusade'],
+        answer: '2'},
+    ] // Array of movie questions.
 
 const codingTrivia = [
     'What year was the first computer virus created in?',
