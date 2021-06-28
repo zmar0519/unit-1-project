@@ -147,39 +147,33 @@ const historyTrivia = [
     
     {
         question: 'What year did the United States become a country?',
-        options: [],
-        answer: ''},
+        options: ['1776', '1783', '1791'],
+        answer: '1'},
         
     {
         question: 'What president is on the $20 bill?',
-        options: ['1776', '1783', '1791'],
-        answer: '1'},
+        options: ['Ulysses S. Grant', 'Alexander Hamilton', 'Andrew Jackson'],
+        answer: '3'},
     
     {
         question: 'How many blimps are there in the world?',
-        options: [],
-        answer: ''},
+        options: ['25', '76', '111'],
+        answer: '1'},
     
     {
         question: 'During the Cold War what beverage company had the 7th largest Navy in the world?',
-        options: [],
-        answer: ''},
+        options: ['Coca Cola', 'Pepsi Co.', 'Anheuser-Busch'],
+        answer: '2'},
         
     {
         question: 'In 1932 Australia declared war against what type of bird?',
-        options: [],
-        answer: ''},
+        options: ['Emus', 'Ostriches', 'Southern Cassowary'],
+        answer: '1'},
 
     {
         question: 'What was the crown at the Empire State Building originally for?',
-        options: [],
-        answer: ''},
-    
-    
-    
-    
-
-    
+        options: ['Dropping for Airships', 'Observation Deck', 'Bungee Jumping'],
+        answer: '1'},    
 ] // Array of history question.
 
 const scienceTrivia = [
