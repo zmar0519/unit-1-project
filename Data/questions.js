@@ -3,10 +3,10 @@ function getRandomMovieQuestion() {
 }
 
 function getRandomCodingQuestion() {
-    return codingTrivia[Math.floor(Math.random() * (codingTivia.length - 1))] // This should generate a random coding question.
+    return codingTrivia[Math.floor(Math.random() * (codingTrivia.length - 1))] // This should generate a random coding question.
 }
 
-function getRandomHistoryQuestion() {
+function getRandomHistoryQuestion(question) {
     return historyTrivia[Math.floor(Math.random() * (historyTrivia.length - 1))] // This should generate a random history question.
 }
 
@@ -435,5 +435,6 @@ export {
     getRandomMovieQuestion,
     getRandomCodingQuestion,
     getRandomHistoryQuestion,
-    getRandomScienceQuestion
+    getRandomScienceQuestion,
+    getRandomQuestion
   } // Exporting the functions at the top of the page to my main JS page so that I can use/call them there.

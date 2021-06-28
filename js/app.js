@@ -1,6 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 
-import { getRandomMovieQuestion, getRandomCodingQuestion, getRandomHistoryQuestion, getRandomScienceQuestion } from "../Data/questions.js" // Importing functions from other JS sheet that will handle the grabbing of random questions.
+import { getRandomMovieQuestion, getRandomCodingQuestion, getRandomHistoryQuestion, getRandomScienceQuestion, getRandomQuestion } from "../Data/questions.js" // Importing functions from other JS sheet that will handle the grabbing of random questions.
 
 /*-------------------------------- Variables --------------------------------*/
 
@@ -30,26 +30,26 @@ randomBtn.addEventListener('click', initRandomQuiz)
 /*-------------------------------- Functions --------------------------------*/
 
 function initMovieQuiz() {
+    currentQuestion = getRandomMovieQuestion().question
     questionHolder.innerHTML = `${currentQuestion}`
-    console.log('Movie Q')
 } // This makes the logic for each of the buttons work. Pressing will return a question from Movie Array.
 
 function initCodingQuiz() {
+    currentQuestion = getRandomCodingQuestion().question
     questionHolder.innerHTML = `${currentQuestion}`
-    console.log('Coding Q') 
 } // This makes the logic for each of the buttons work. Pressing will return a question from Coding Array.
 
 function initHistoryQuiz(){
+    currentQuestion = getRandomHistoryQuestion().question
     questionHolder.innerHTML = `${currentQuestion}`
-    console.log('History Q')
 } // This makes the logic for each of the buttons work. Pressing will return a question from History Array.
 
 function initScienceQuiz(){
+    currentQuestion = getRandomScienceQuestion().question
     questionHolder.innerHTML = `${currentQuestion}`
-    console.log('Science Q')
 } // This makes the logic for each of the buttons work. Pressing will return a question from Science Array.
 
 function initRandomQuiz() {
+    currentQuestion = getRandomQuestion().question
     questionHolder.innerHTML = `${currentQuestion}`
-    console.log('Random Q')
 } // This makes the logic for each of the buttons work. Pressing will return a question from Random Array.
