@@ -177,16 +177,55 @@ const historyTrivia = [
 ] // Array of history question.
 
 const scienceTrivia = [
-    'What is the second element on the periodic table?',
-    'How many states of matter are there?',
-    'What is the powerhouse of the cell?',
-    'Who came up with the theory of relativity?',
-    'Which planet has the most moons?',
-    "What does it mean if a cloud has nimbus in its name?",
-    'What is the average BPM of a hummingbirds heart?',
-    'How many new species are discovered each year on average?',
-    'How many eggs does a queen bee lay in a day?',
-    'How fast does a skydiving person fall when they hit terminal velocity?'
+    {
+        question: 'What is the second element on the periodic table?',
+        options: ['Hydrogen', 'Oxygen', 'Helium'],
+        answer: '3'},
+
+    {
+        question: 'How many states of matter are there?',
+        options: ['3', '4', '5'],
+        answer: '2'},
+
+    {
+        question: 'What is the powerhouse of the cell?',
+        options: ['Mitochondria', 'Lysosomes', 'Nucleus'],
+        answer: '1'},
+    
+    {
+        question: 'Who came up with the theory of relativity?',
+        options: ['Einstein', 'Galileo', 'Hawking'],
+        answer: '1'},
+
+    {
+        question: 'Which planet has the most moons?',
+        options: ['Saturn', 'Jupiter', 'Earth'],
+        answer: '2'},
+
+    {
+        question: 'What does it mean if a cloud has nimbus in its name?',
+        options: ['It is in the stratosphere', 'It contains precipitation', 'It will cause thunderstorms'],
+        answer: '3'},
+        
+    {
+        question: 'What is the average BPM of a hummingbirds heart?',
+        options: ['210', '567', '1270'],
+        answer: '3'},
+    
+    {
+        question: 'How many new species are discovered each year on average?',
+        options: ['18', '1800', '3450'],
+        answer: '2'},
+
+    {
+        question: 'How many eggs can a queen bee lay in a day?',
+        options: ['500+', '3000+', '5000+'],
+        answer: '2'},
+
+    {
+        question: 'How fast does a skydiving person fall when they hit terminal velocity?',
+        options: ['80mph', '100mph', '120mph'],
+        answer: '3'},    
 ] // Array of scient questions.
 
 const randomTrivia = [
