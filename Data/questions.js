@@ -20,19 +20,19 @@ function getRandomQuestion() {
 
 
 const movieTrivia = [
-    { 
+    {
         question: 'In the matrix does Neo take the blue pill or the red pill?',
-        options: ['Red','Blue','Neither'],
+        options: ['1. Red','2. Blue','3. Neither'],
         answer: '1'},
     
     {
         question: 'Who played Forest Gump in the movie Forest Gump?',
-        options: ['Robin Williams', 'Tom Hanks', 'Robert De Niro'],
+        options: ['1. Robin Williams', '2. Tom Hanks', '3. Robert De Niro'],
         answer: '2'},
 
     {
-        question: 'Who did Rose tell she would never let go in Titanic(immediately before letting go)?',
-        options: ['Jack', 'Bill', 'Frank'],
+        question: 'Who did Rose tell she would never let go in Titanic (immediately before letting go)?',
+        options: ['1. Jack', '2. Bill', '3. Frank'],
         answer: '1'},
     
     {
@@ -41,7 +41,7 @@ const movieTrivia = [
         answer: '2'},
 
     {
-        questions: "What movie has the record for most 'F-Bombs' in a single move?",
+        question: "What movie has the record for most 'F-Bombs' in a single move?",
         options: ['Uncut Gems', 'End of Watch', 'Wolf of Wall Street'],
         answer: '3'},
     
@@ -49,7 +49,6 @@ const movieTrivia = [
         question: "What character in Monty Python famously says 'Tis but a scratch?'",
         options: ['The Black Knight', 'Lancelot', 'The Green Knight'],
         answer: '1'},
-    
 
     {
         question: 'What is the name of the movie about the Jamaican Bobsled team?',
@@ -69,8 +68,8 @@ const movieTrivia = [
     {
         question: "Which Indianna Jone's movie starred Shia Labeouf?",
         options: ['Raiders of the Lost Ark', 'Kingdom of the Crystal Skull', 'The Last Crusade'],
-        answer: '2'},
-    ] // Array of movie questions.
+        answer: '2'}
+] // Array of movie questions.
 
 const codingTrivia = [
     {
@@ -240,7 +239,7 @@ const randomTrivia = [
         answer: '2'},
 
     {
-        question: 'Who did Rose tell she would never let go in Titanic(immediately before letting go)?',
+        question: 'Who did Rose tell she would never let go in Titanic (immediately before letting go)?',
         options: ['Jack', 'Bill', 'Frank'],
         answer: '1'},
     
@@ -250,7 +249,7 @@ const randomTrivia = [
         answer: '2'},
 
     {
-        questions: "What movie has the record for most 'F-Bombs' in a single move?",
+        question: "What movie has the record for most 'F-Bombs' in a single move?",
         options: ['Uncut Gems', 'End of Watch', 'Wolf of Wall Street'],
         answer: '3'},
     

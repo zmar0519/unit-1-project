@@ -5,10 +5,11 @@ import { getRandomMovieQuestion, getRandomCodingQuestion, getRandomHistoryQuesti
 /*-------------------------------- Variables --------------------------------*/
 
 let question
-let questionAnswer
+let currentAnswers
 let score
-let previousQuestions = []
 let currentQuestion
+let objectArray = []
+let previousQuestions = []
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -18,6 +19,7 @@ const historyBtn = document.querySelector('#history-button')
 const scienceBtn = document.querySelector('#science-button')
 const randomBtn = document.querySelector('#random-button')
 const questionHolder = document.querySelector('#question-holder')
+const answerHolder = document.querySelector('#answer-holder')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -30,26 +32,41 @@ randomBtn.addEventListener('click', initRandomQuiz)
 /*-------------------------------- Functions --------------------------------*/
 
 function initMovieQuiz() {
-    currentQuestion = getRandomMovieQuestion().question
+    objectArray = getRandomMovieQuestion()
+    currentQuestion = objectArray.question
     questionHolder.innerHTML = `${currentQuestion}`
+    currentAnswers = objectArray.options
+    answerHolder.innerHTML = `${currentAnswers}`
 } // This makes the logic for each of the buttons work. Pressing will return a question from Movie Array.
 
 function initCodingQuiz() {
-    currentQuestion = getRandomCodingQuestion().question
+    objectArray = getRandomCodingQuestion()
+    currentQuestion = objectArray.question
     questionHolder.innerHTML = `${currentQuestion}`
+    currentAnswers = objectArray.options
+    answerHolder.innerHTML = `${currentAnswers}`
 } // This makes the logic for each of the buttons work. Pressing will return a question from Coding Array.
 
 function initHistoryQuiz(){
-    currentQuestion = getRandomHistoryQuestion().question
+    objectArray = getRandomHistoryQuestion()
+    currentQuestion = objectArray.question
     questionHolder.innerHTML = `${currentQuestion}`
+    currentAnswers = objectArray.options
+    answerHolder.innerHTML = `${currentAnswers}`
 } // This makes the logic for each of the buttons work. Pressing will return a question from History Array.
 
 function initScienceQuiz(){
-    currentQuestion = getRandomScienceQuestion().question
+    objectArray = getRandomScienceQuestion()
+    currentQuestion = objectArray.question
     questionHolder.innerHTML = `${currentQuestion}`
+    currentAnswers = objectArray.options
+    answerHolder.innerHTML = `${currentAnswers}`
 } // This makes the logic for each of the buttons work. Pressing will return a question from Science Array.
 
 function initRandomQuiz() {
-    currentQuestion = getRandomQuestion().question
+    objectArray = getRandomQuestion()
+    currentQuestion = objectArray.question
     questionHolder.innerHTML = `${currentQuestion}`
+    currentAnswers = objectArray.options
+    answerHolder.innerHTML = `${currentAnswers}`
 } // This makes the logic for each of the buttons work. Pressing will return a question from Random Array.

@@ -26,3 +26,15 @@ h1, h2, h3 {
 .start-buttons {
     text-align: center;
 }
+
+#question-holder {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+#answer-holder {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+}
