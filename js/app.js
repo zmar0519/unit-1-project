@@ -1,6 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 
-
+import { getRandomMovieQuestion, getRandomCodingQuestion, getRandomHistoryQuestion, getRandomScienceQuestion } from "../Data/questions.js" // Importing functions from other JS sheet that will handle the grabbing of random questions.
 
 /*-------------------------------- Variables --------------------------------*/
 
@@ -8,6 +8,7 @@ let question
 let questionAnswer
 let score
 let previousQuestions = []
+let currentQuestion
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -20,15 +21,22 @@ const randomBtn = document.querySelector('#random-button')
 /*----------------------------- Event Listeners -----------------------------*/
 
 movieBtn.addEventListener('click', initMovieQuiz)
-codingBtn.addEventListener('click', initCodingQuiz)
-historyBtn.addEventListener('click', initHistoryQuiz)
-scienceBtn.addEventListener('click', initScienceQuiz)
-randomBtn.addEventListener('click', initRandomQuiz)
+// codingBtn.addEventListener('click', initCodingQuiz)
+// historyBtn.addEventListener('click', initHistoryQuiz)
+// scienceBtn.addEventListener('click', initScienceQuiz)
+// randomBtn.addEventListener('click', initRandomQuiz)
 
 /*-------------------------------- Functions --------------------------------*/
 
-import { getRandomMovieQuestion, getRandomCodingQuestion, getRandomHistoryQuestion, getRandomScienceQuestion } from "../Data/questions.js"
-
-function render() {
-
+function initMovieQuiz() {
+questionHolder.innerHTML = "`${currentQuestion}`"
 }
+
+
+function initCodingQuiz()
+
+function initHistoryQuiz()
+
+function initScienceQuiz()
+
+function initRandomQuiz()
