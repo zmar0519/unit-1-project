@@ -38,3 +38,8 @@ h1, h2, h3 {
     margin-top: 30px;
     font-size: 15px;
 }
+
+.answer-buttons {
+    text-align: center;
+    margin-top: 20px;
+}

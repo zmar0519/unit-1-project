@@ -20,6 +20,9 @@ const scienceBtn = document.querySelector('#science-button')
 const randomBtn = document.querySelector('#random-button')
 const questionHolder = document.querySelector('#question-holder')
 const answerHolder = document.querySelector('#answer-holder')
+let answerOne = document.querySelector('#answer-1')
+let answerTwo = document.querySelector('#answer-2')
+let answerThree = document.querySelector('#answer-3')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -28,6 +31,7 @@ codingBtn.addEventListener('click', initCodingQuiz)
 historyBtn.addEventListener('click', initHistoryQuiz)
 scienceBtn.addEventListener('click', initScienceQuiz)
 randomBtn.addEventListener('click', initRandomQuiz)
+answerOne.addEventListener('click',)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -47,7 +51,7 @@ function initCodingQuiz() {
     answerHolder.innerHTML = `${currentAnswers}`
 } // This makes the logic for each of the buttons work. Pressing will return a question from Coding Array.
 
-function initHistoryQuiz(){
+function initHistoryQuiz() {
     objectArray = getRandomHistoryQuestion()
     currentQuestion = objectArray.question
     questionHolder.innerHTML = `${currentQuestion}`
@@ -55,7 +59,7 @@ function initHistoryQuiz(){
     answerHolder.innerHTML = `${currentAnswers}`
 } // This makes the logic for each of the buttons work. Pressing will return a question from History Array.
 
-function initScienceQuiz(){
+function initScienceQuiz() {
     objectArray = getRandomScienceQuestion()
     currentQuestion = objectArray.question
     questionHolder.innerHTML = `${currentQuestion}`
