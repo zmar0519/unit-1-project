@@ -31,7 +31,9 @@ codingBtn.addEventListener('click', initCodingQuiz)
 historyBtn.addEventListener('click', initHistoryQuiz)
 scienceBtn.addEventListener('click', initScienceQuiz)
 randomBtn.addEventListener('click', initRandomQuiz)
-answerOne.addEventListener('click',)
+answerOne.addEventListener('click', checkResponse)
+answerTwo.addEventListener('click', checkResponse)
+answerThree.addEventListener('click', checkResponse)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -74,3 +76,7 @@ function initRandomQuiz() {
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
 } // This makes the logic for each of the buttons work. Pressing will return a question from Random Array.
+
+function checkResponse () {
+
+}
