@@ -20,6 +20,7 @@ let currentQuestion
 let objectArray = []
 let previousQuestions = []
 let category = ''
+let questionsAnswered = 0
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -82,21 +83,29 @@ function checkResponse (e) {
     switch(category){
         case 'movie':
             objectArray = getRandomMovieQuestion()
-                break;
+            break;
         case 'coding':
             objectArray = getRandomCodingQuestion()
-                break;
+            break;
         case 'history':
             objectArray = getRandomHistoryQuestion()
-                break;
+            break;
         case 'science':
             objectArray = getRandomScienceQuestion()
-                break;
+            break;
         case 'random':
             objectArray = getRandomQuestion()
-                break;
+            break;
     }
+    questionsAnswered++
+    if (questionsAnswered == 10) {
+        renderEndScreen()
+    } else {
+    render()
+    // This checks if the answer is correct and adds score.
+    // Also sets the category of the questions so they are from the same category.
     console.log(score)
+    }
 }
 
 function render() {
@@ -105,4 +114,8 @@ function render() {
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
     // This will render the question as well as the answers for all categories.
+}
+
+function renderEndScreen() {
+    
 }
