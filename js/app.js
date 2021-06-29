@@ -104,5 +104,5 @@ function render() {
     questionHolder.innerHTML = `${currentQuestion}`
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
-    
+    // This will render the question as well as the answers for all categories.
 }
