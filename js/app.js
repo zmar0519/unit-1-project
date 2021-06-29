@@ -2,6 +2,15 @@
 
 import { getRandomMovieQuestion, getRandomCodingQuestion, getRandomHistoryQuestion, getRandomScienceQuestion, getRandomQuestion } from "../Data/questions.js" // Importing functions from other JS sheet that will handle the grabbing of random questions.
 
+const colorScheme = {
+    dark: "",
+    change: function () {
+      console.log(colorScheme.dark)
+      colorScheme.dark = colorScheme.dark ? "" : "dark"
+      document.querySelector("body").setAttribute("class", colorScheme.dark)
+      console.log(colorScheme.dark)
+    }
+}
 /*-------------------------------- Variables --------------------------------*/
 
 let question
@@ -79,5 +88,5 @@ function initRandomQuiz() {
 
 function checkResponse () {
     let answer = ''
-    if (event.target.id === 'button-1') { answer = objectArray.answer}
+    if (target.id === 'button-1') { answer = objectArray.answer}
 }
