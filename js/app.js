@@ -15,10 +15,11 @@ const colorScheme = {
 
 let question
 let currentAnswers
-let score
+let score = 0
 let currentQuestion
 let objectArray = []
 let previousQuestions = []
+let category = ''
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -47,46 +48,61 @@ answerThree.addEventListener('click', checkResponse)
 /*-------------------------------- Functions --------------------------------*/
 
 function initMovieQuiz() {
+    category = 'movie'
     objectArray = getRandomMovieQuestion()
-    currentQuestion = objectArray.question
-    questionHolder.innerHTML = `${currentQuestion}`
-    currentAnswers = objectArray.options
-    answerHolder.innerHTML = `${currentAnswers}`
+    render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Movie Array.
 
 function initCodingQuiz() {
+    category = 'coding'
     objectArray = getRandomCodingQuestion()
-    currentQuestion = objectArray.question
-    questionHolder.innerHTML = `${currentQuestion}`
-    currentAnswers = objectArray.options
-    answerHolder.innerHTML = `${currentAnswers}`
+    render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Coding Array.
 
 function initHistoryQuiz() {
+    category = 'history'
     objectArray = getRandomHistoryQuestion()
-    currentQuestion = objectArray.question
-    questionHolder.innerHTML = `${currentQuestion}`
-    currentAnswers = objectArray.options
-    answerHolder.innerHTML = `${currentAnswers}`
+    render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from History Array.
 
 function initScienceQuiz() {
+    category = 'science'
     objectArray = getRandomScienceQuestion()
-    currentQuestion = objectArray.question
-    questionHolder.innerHTML = `${currentQuestion}`
-    currentAnswers = objectArray.options
-    answerHolder.innerHTML = `${currentAnswers}`
+    render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Science Array.
 
 function initRandomQuiz() {
+    category = 'random'
     objectArray = getRandomQuestion()
+    render()
+} // This makes the logic for each of the buttons work. Pressing will return a question from Random Array.
+
+function checkResponse (e) {
+    if (e.target.id === objectArray.answer) score += 10;
+    switch(category){
+        case 'movie':
+            objectArray = getRandomMovieQuestion()
+                break;
+        case 'coding':
+            objectArray = getRandomCodingQuestion()
+                break;
+        case 'history':
+            objectArray = getRandomHistoryQuestion()
+                break;
+        case 'science':
+            objectArray = getRandomScienceQuestion()
+                break;
+        case 'random':
+            objectArray = getRandomQuestion()
+                break;
+    }
+    console.log(score)
+}
+
+function render() {
     currentQuestion = objectArray.question
     questionHolder.innerHTML = `${currentQuestion}`
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
-} // This makes the logic for each of the buttons work. Pressing will return a question from Random Array.
-
-function checkResponse () {
-    let answer = ''
-    if (target.id === 'button-1') { answer = objectArray.answer}
+    
 }
