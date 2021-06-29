@@ -78,6 +78,6 @@ function initRandomQuiz() {
 } // This makes the logic for each of the buttons work. Pressing will return a question from Random Array.
 
 function checkResponse () {
-    let answer = ‘’
-    if (event.target.id === ‘button-1’) { answer =  objectArray.answer}
+    let answer = ''
+    if (event.target.id === 'button-1') { answer = objectArray.answer}
 }
