@@ -19,7 +19,12 @@ html {
     --serif: 'Playfair Display', serif;
 }
 
-h1, h2, h3 {
+h1 {
+    text-align: center;
+    padding-right: 65px;
+}
+
+h2, h3 {
     text-align: center;
 }
 
@@ -51,8 +56,7 @@ body {
 
 .top {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #light-mode {

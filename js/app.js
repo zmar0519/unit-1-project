@@ -35,6 +35,7 @@ const lightMode = document.getElementById(".light-mode")
 let answerOne = document.querySelector('#answer-1')
 let answerTwo = document.querySelector('#answer-2')
 let answerThree = document.querySelector('#answer-3')
+let displayScore = document.getElementById('score')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -46,7 +47,7 @@ randomBtn.addEventListener('click', initRandomQuiz)
 answerOne.addEventListener('click', checkResponse)
 answerTwo.addEventListener('click', checkResponse)
 answerThree.addEventListener('click', checkResponse)
-lightMode.addEventListener('click', change)
+// lightMode.addEventListener('click', change)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -114,6 +115,7 @@ function render() {
     questionHolder.innerHTML = `${currentQuestion}`
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
+    console.log(score)
     displayScore.innerHTML = `Score: ${score}` // This doesn't work...why?
     // This will render the question as well as the answers for all categories.
 }
