@@ -112,7 +112,7 @@ function render() {
     questionHolder.innerHTML = `${currentQuestion}`
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
-    displayScore.innerHTML = `Score: ${score}`
+    displayScore.innerHTML = `Score: ${score}` // This doesn't work...why?
     // This will render the question as well as the answers for all categories.
 }
 

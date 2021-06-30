@@ -47,3 +47,14 @@ h1, h2, h3 {
 body {
     background-color: grey;
 }
+
+.top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+#light-mode {
+    justify-content: left;
+    align-items: left;
+}
