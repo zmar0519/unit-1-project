@@ -119,4 +119,5 @@ function render() {
 function renderEndScreen() {
     questionHolder.innerHTML = `Thanks for playing your score is ${score}!`
     answerHolder.innerHTML = ''
+    
 }
