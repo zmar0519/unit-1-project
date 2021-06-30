@@ -104,7 +104,6 @@ function checkResponse (e) {
     render()
     // This checks if the answer is correct and adds score.
     // Also sets the category of the questions so they are from the same category.
-    console.log(score)
     }
 }
 
@@ -113,11 +112,14 @@ function render() {
     questionHolder.innerHTML = `${currentQuestion}`
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
+    displayScore.innerHTML = `Score: ${score}`
     // This will render the question as well as the answers for all categories.
 }
 
 function renderEndScreen() {
     questionHolder.innerHTML = `Thanks for playing your score is ${score}!`
     answerHolder.innerHTML = ''
-    
+    answerOne.style.display = "none"
+    answerTwo.style.display = "none"
+    answerThree.style.display = "none"
 }
