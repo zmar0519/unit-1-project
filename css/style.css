@@ -59,3 +59,9 @@ body {
     justify-content: left;
     align-items: left;
 }
+
+.button-container{    
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
