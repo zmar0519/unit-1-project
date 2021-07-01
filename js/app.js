@@ -19,6 +19,7 @@ let currentQuestion
 let objectArray = []
 let category = ''
 let questionsAnswered = 0
+let timer
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -60,7 +61,7 @@ function initMovieQuiz() {
     answerTwo.style.display = ""
     answerThree.style.display = ""
     let timeLeft = 100
-    let timer = setInterval(function(){
+    timer = setInterval(function(){
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
@@ -78,7 +79,7 @@ function initCodingQuiz() {
     answerTwo.style.display = ""
     answerThree.style.display = ""
     let timeLeft = 100
-    let timer = setInterval(function(){
+    timer = setInterval(function(){
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
@@ -96,7 +97,7 @@ function initHistoryQuiz() {
     answerTwo.style.display = ""
     answerThree.style.display = ""
     let timeLeft = 100
-    let timer = setInterval(function(){
+    timer = setInterval(function(){
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
@@ -114,7 +115,7 @@ function initScienceQuiz() {
     answerTwo.style.display = ""
     answerThree.style.display = ""
     let timeLeft = 100
-    let timer = setInterval(function(){
+    timer = setInterval(function(){
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
@@ -132,7 +133,7 @@ function initRandomQuiz() {
     answerTwo.style.display = ""
     answerThree.style.display = ""
     let timeLeft = 100
-    let timer = setInterval(function(){
+    timer = setInterval(function(){
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
@@ -166,6 +167,8 @@ function checkResponse (e) {
             break;
     }
     if (questionsAnswered == 10) {
+        console.log(questionsAnswered)
+        clearInterval(timer)
         renderEndScreen()
     } else {
     render()
