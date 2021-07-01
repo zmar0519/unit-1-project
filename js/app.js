@@ -53,7 +53,14 @@ lightDarkBtn.addEventListener("click", colorScheme.change)
 
 /*-------------------------------- Functions --------------------------------*/
 
+answerOne.style.display = "none"
+answerTwo.style.display = "none"
+answerThree.style.display = "none"
+
 function initMovieQuiz() {
+    answerOne.style.display = ""
+    answerTwo.style.display = ""
+    answerThree.style.display = ""
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
@@ -70,6 +77,9 @@ function initMovieQuiz() {
 } // This makes the logic for each of the buttons work. Pressing will return a question from Movie Array.
 
 function initCodingQuiz() {
+    answerOne.style.display = ""
+    answerTwo.style.display = ""
+    answerThree.style.display = ""
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
@@ -86,6 +96,9 @@ function initCodingQuiz() {
 } // This makes the logic for each of the buttons work. Pressing will return a question from Coding Array.
 
 function initHistoryQuiz() {
+    answerOne.style.display = ""
+    answerTwo.style.display = ""
+    answerThree.style.display = ""
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
@@ -102,6 +115,9 @@ function initHistoryQuiz() {
 } // This makes the logic for each of the buttons work. Pressing will return a question from History Array.
 
 function initScienceQuiz() {
+    answerOne.style.display = ""
+    answerTwo.style.display = ""
+    answerThree.style.display = ""
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
@@ -118,6 +134,9 @@ function initScienceQuiz() {
 } // This makes the logic for each of the buttons work. Pressing will return a question from Science Array.
 
 function initRandomQuiz() {
+    answerOne.style.display = ""
+    answerTwo.style.display = ""
+    answerThree.style.display = ""
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
@@ -180,6 +199,7 @@ function renderEndScreen() {
     answerThree.style.display = "none"
     questionsAnswered = 0
     displayScore.innerHTML = `Score: ${score}`
+    endClap.play()
 }
 
 checkUserColorSchemePreference()
