@@ -31,7 +31,7 @@ const scienceBtn = document.querySelector('#science-button')
 const randomBtn = document.querySelector('#random-button')
 const questionHolder = document.querySelector('#question-holder')
 const answerHolder = document.querySelector('#answer-holder')
-const darkMode = document.getElementById(".dark-mode")
+const darkMode = document.getElementById('dark-mode')
 let answerOne = document.querySelector('#answer-1')
 let answerTwo = document.querySelector('#answer-2')
 let answerThree = document.querySelector('#answer-3')
@@ -47,7 +47,7 @@ randomBtn.addEventListener('click', initRandomQuiz)
 answerOne.addEventListener('click', checkResponse)
 answerTwo.addEventListener('click', checkResponse)
 answerThree.addEventListener('click', checkResponse)
-// darkMode.addEventListener('click', change)
+darkMode.addEventListener('click', () => {document.body.classList.toggle('dark')})
 
 /*-------------------------------- Functions --------------------------------*/
 

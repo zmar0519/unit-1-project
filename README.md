@@ -13,6 +13,11 @@ This game specifically uses the following technology:
 * JavaScript
 * Git
 
+## Screenshots
+### Main Screen ![Main Screen of the Quiz Mania App](https://i.imgur.com/JPlhNBl.png)
+### Main Question Answering Screen ![Main Screen of the Quiz Mania App](https://i.imgur.com/eProC92.png)
+### Finally End Screen ![Final End Screen after all questions have been answered](https://i.imgur.com/WCH1eam.png)
+
 ## Trivia Mania Instructions
 
 Trivia Mania will load and prompt you to select the category you would like to answer question in. Upon selecting a categroy a question will appear. Under the question you will have 3 potential answers with a single correct. Select the answer that you believe is correct and you will be prompted with the next question. A total of ten questions will appear per quiz. For each question that you get right you will be award 10 points for a total possible scrore of 100. Any wrong questions will not receive any points.

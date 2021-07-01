@@ -146,7 +146,7 @@ let codingTrivia = [
         answer: 'answer-3'},
 
     {
-        questions: 'Currently, what is the most popular coding language in the world according to GitHub?',
+        question: 'Currently, what is the most popular coding language in the world according to GitHub?',
         options: ['1. JavaScript', ' 2. Python', ' 3. Java'],
         answer: 'answer-1'}
 ] // Array of coding questions.
@@ -199,7 +199,7 @@ let historyTrivia = [
 
     {
         question: 'What was the crown at the Empire State Building originally for?',
-        options: ['1. Dropping for Airships', ' 2. Observation Deck', ' 3. Bungee Jumping'],
+        options: ['1. Docking for Airships', ' 2. Observation Deck', ' 3. Bungee Jumping'],
         answer: 'answer-1'},    
 ] // Array of history question.
 
