@@ -31,13 +31,13 @@ const scienceBtn = document.querySelector('#science-button')
 const randomBtn = document.querySelector('#random-button')
 const questionHolder = document.querySelector('#question-holder')
 const answerHolder = document.querySelector('#answer-holder')
-const darkMode = document.getElementById('dark-mode')
-let answerOne = document.querySelector('#answer-1')
-let answerTwo = document.querySelector('#answer-2')
-let answerThree = document.querySelector('#answer-3')
-let displayScore = document.getElementById('score')
-const endClap = new Audio("../audio/fox.mp3")
-let countdownEl = document.getElementById('countdown')
+const answerOne = document.querySelector('#answer-1')
+const answerTwo = document.querySelector('#answer-2')
+const answerThree = document.querySelector('#answer-3')
+const displayScore = document.getElementById('score')
+const endClap = new Audio("../audio/clap.wav")
+const countdownEl = document.getElementById('countdown')
+const lightDarkBtn = document.querySelector("#light-dark-button")
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -49,35 +49,85 @@ randomBtn.addEventListener('click', initRandomQuiz)
 answerOne.addEventListener('click', checkResponse)
 answerTwo.addEventListener('click', checkResponse)
 answerThree.addEventListener('click', checkResponse)
-darkMode.addEventListener('click', () => {document.body.classList.toggle('dark')})
+lightDarkBtn.addEventListener("click", colorScheme.change)
 
 /*-------------------------------- Functions --------------------------------*/
 
 function initMovieQuiz() {
+    let timeLeft = 100
+    let timer = setInterval(function(){
+    timeLeft -= 1
+    console.log(timeLeft)
+    countdownEl.textContent = `${timeLeft} seconds remaining.`
+    if (timeLeft < 1) {
+        renderEndScreen()
+        clearInterval(timer)
+    }
+    }, 1000)
     category = 'movie'
     objectArray = getRandomMovieQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Movie Array.
 
 function initCodingQuiz() {
+    let timeLeft = 100
+    let timer = setInterval(function(){
+    timeLeft -= 1
+    console.log(timeLeft)
+    countdownEl.textContent = `${timeLeft} seconds remaining.`
+    if (timeLeft < 1) {
+        renderEndScreen()
+        clearInterval(timer)
+    }
+    }, 1000)
     category = 'coding'
     objectArray = getRandomCodingQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Coding Array.
 
 function initHistoryQuiz() {
+    let timeLeft = 100
+    let timer = setInterval(function(){
+    timeLeft -= 1
+    console.log(timeLeft)
+    countdownEl.textContent = `${timeLeft} seconds remaining.`
+    if (timeLeft < 1) {
+        renderEndScreen()
+        clearInterval(timer)
+    }
+    }, 1000)
     category = 'history'
     objectArray = getRandomHistoryQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from History Array.
 
 function initScienceQuiz() {
+    let timeLeft = 100
+    let timer = setInterval(function(){
+    timeLeft -= 1
+    console.log(timeLeft)
+    countdownEl.textContent = `${timeLeft} seconds remaining.`
+    if (timeLeft < 1) {
+        renderEndScreen()
+        clearInterval(timer)
+    }
+    }, 1000)
     category = 'science'
     objectArray = getRandomScienceQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Science Array.
 
 function initRandomQuiz() {
+    let timeLeft = 100
+    let timer = setInterval(function(){
+    timeLeft -= 1
+    console.log(timeLeft)
+    countdownEl.textContent = `${timeLeft} seconds remaining.`
+    if (timeLeft < 1) {
+        renderEndScreen()
+        clearInterval(timer)
+    }
+    }, 1000)
     category = 'random'
     objectArray = getRandomQuestion(questionsAnswered)
     render()
@@ -120,16 +170,6 @@ function render() {
     console.log(score)
     displayScore.innerHTML = `Score: ${score}` // Gives real time score.
     // This will render the question as well as the answers for all categories.
-    let timeLeft = 100
-    let timer = setInterval(function(){
-    timeLeft -= 1
-    console.log(timeLeft)
-    countdownEl.textContent = `${timeLeft} seconds remaining.`
-    if (timeLeft < 1) {
-        renderEndScreen()
-        clearInterval(timer)
-    }
-    }, 1000)
 }
 
 function renderEndScreen() {
@@ -140,5 +180,15 @@ function renderEndScreen() {
     answerThree.style.display = "none"
     questionsAnswered = 0
     displayScore.innerHTML = `Score: ${score}`
-    endClap.play()
+}
+
+checkUserColorSchemePreference()
+
+function checkUserColorSchemePreference() {
+  if (
+    window.matchMedia("(prefers-color-scheme:dark)").matches &&
+    !colorScheme.dark
+  ) {
+    colorScheme.change()
+  }
 }

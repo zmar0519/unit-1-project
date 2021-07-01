@@ -11,6 +11,7 @@ This game specifically uses the following technology:
 * HTML
 * CSS
 * JavaScript
+* Bootstrap
 * Git
 
 ## Screenshots
@@ -24,7 +25,10 @@ This game specifically uses the following technology:
 
 Trivia Mania will load and prompt you to select the category you would like to answer question in. Upon selecting a categroy a question will appear. Under the question you will have 3 potential answers with a single correct. Select the answer that you believe is correct and you will be prompted with the next question. A total of ten questions will appear per quiz. For each question that you get right you will be award 10 points for a total possible scrore of 100. Any wrong questions will not receive any points. Be Quick! You only have 100 seconds to answer all 10 questions. If you fail to answer all the questions within the 100 seconds you will automatically brought to the end screen and the score you have at that time will be the score you are stuck with!
 
-
 The categories available are movie, coding, history, science or random. If you select random then questions will be pulled randomly from all the categories.
+
+
+### CREDITS:
+SHUFFLE ARRAY FUNCTION: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 
 Licensing and legal info: https://choosealicense.com/licenses/gpl-3.0/
