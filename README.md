@@ -14,6 +14,8 @@ This game specifically uses the following technology:
 * Git
 
 ## Screenshots
+### Wireframe ![Wireframe of the app](https://i.imgur.com/leXiUIO.png)
+
 ### Main Screen ![Main Screen of the Quiz Mania App](https://i.imgur.com/JPlhNBl.png)
 ### Main Question Answering Screen ![Main Screen of the Quiz Mania App](https://i.imgur.com/eProC92.png)
 ### Finally End Screen ![Final End Screen after all questions have been answered](https://i.imgur.com/WCH1eam.png)
