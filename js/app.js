@@ -5,10 +5,9 @@ import { getRandomMovieQuestion, getRandomCodingQuestion, getRandomHistoryQuesti
 const colorScheme = {
     dark: "",
     change: function () {
-      console.log(colorScheme.dark)
       colorScheme.dark = colorScheme.dark ? "" : "dark"
       document.querySelector("body").setAttribute("class", colorScheme.dark)
-      console.log(colorScheme.dark)
+      colorScheme.dark ? lightDarkBtn.innerText = 'Light Mode' : lightDarkBtn.innerText = 'Dark Mode'
     }
 }
 /*-------------------------------- Variables --------------------------------*/
@@ -18,7 +17,6 @@ let currentAnswers
 let score = 0
 let currentQuestion
 let objectArray = []
-let previousQuestions = []
 let category = ''
 let questionsAnswered = 0
 
@@ -64,7 +62,6 @@ function initMovieQuiz() {
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
-    console.log(timeLeft)
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
         renderEndScreen()
@@ -83,7 +80,6 @@ function initCodingQuiz() {
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
-    console.log(timeLeft)
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
         renderEndScreen()
@@ -102,7 +98,6 @@ function initHistoryQuiz() {
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
-    console.log(timeLeft)
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
         renderEndScreen()
@@ -121,7 +116,6 @@ function initScienceQuiz() {
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
-    console.log(timeLeft)
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
         renderEndScreen()
@@ -140,7 +134,6 @@ function initRandomQuiz() {
     let timeLeft = 100
     let timer = setInterval(function(){
     timeLeft -= 1
-    console.log(timeLeft)
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
         renderEndScreen()
@@ -186,7 +179,6 @@ function render() {
     questionHolder.innerHTML = `${currentQuestion}`
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
-    console.log(score)
     displayScore.innerHTML = `Score: ${score}` // Gives real time score.
     // This will render the question as well as the answers for all categories.
 }
