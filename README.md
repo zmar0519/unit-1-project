@@ -25,8 +25,8 @@ This game specifically uses the following technology:
 
 ### Main Screen ![Main Screen of the Quiz Mania App](https://i.imgur.com/LpsyGYf.png)
 ### Main Question Answering Screen ![Main Screen of the Quiz Mania App](https://i.imgur.com/NVJcj8X.png)
-### Finally End Screen ![Final End Screen after all questions have been answered](https://i.imgur.com/DaGV7pr.png)
-### Dark Mode ![A dark mode for those night owls playing quiz late into the night](https://i.imgur.com/DaGV7pr.png)
+### Final End Screen ![Final End Screen after all questions have been answered](https://i.imgur.com/DaGV7pr.png)
+### Dark Mode ![A dark mode for those night owls playing quiz late into the night](https://i.imgur.com/l1hB1xQ.png)
 
 ## NEXT STEPS:
 * Ability to edit timer length
