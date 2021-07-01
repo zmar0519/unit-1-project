@@ -50,11 +50,13 @@ h2, h3 {
 }
 
 body {
-    background: lightgrey;
+    background-image: url("https://wallpaperaccess.com/full/2384075.jpg");
+   background-size: cover;
 }
 
 body.dark {
-    background-color: #252525;
+    background-image: url(https://i.pinimg.com/originals/9d/47/51/9d4751b755e297a8d2aa74ed99eed180.jpg);
+    /* background-color: #252525; */
     color: white;
 }
 
