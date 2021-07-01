@@ -64,7 +64,7 @@ function initMovieQuiz() {
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
-        renderEndScreen()
+        renderLossScreen()
         clearInterval(timer)
     }
     }, 1000)
@@ -82,7 +82,7 @@ function initCodingQuiz() {
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
-        renderEndScreen()
+        renderLossScreen()
         clearInterval(timer)
     }
     }, 1000)
@@ -100,7 +100,7 @@ function initHistoryQuiz() {
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
-        renderEndScreen()
+        renderLossScreen()
         clearInterval(timer)
     }
     }, 1000)
@@ -118,7 +118,7 @@ function initScienceQuiz() {
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
-        renderEndScreen()
+        renderLossScreen()
         clearInterval(timer)
     }
     }, 1000)
@@ -136,7 +136,7 @@ function initRandomQuiz() {
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
     if (timeLeft < 1) {
-        renderEndScreen()
+        renderLossScreen()
         clearInterval(timer)
     }
     }, 1000)
@@ -192,6 +192,16 @@ function renderEndScreen() {
     questionsAnswered = 0
     displayScore.innerHTML = `Score: ${score}`
     endClap.play()
+}
+
+function renderLossScreen() {
+    questionHolder.innerHTML = `You ran out of time you lose! Get wrekt kid!`
+    answerHolder.innerHTML = ''
+    answerOne.style.display = "none"
+    answerTwo.style.display = "none"
+    answerThree.style.display = "none"
+    questionsAnswered = 0
+    displayScore.innerHTML = `Score: 0`
 }
 
 checkUserColorSchemePreference()
