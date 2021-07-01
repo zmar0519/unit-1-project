@@ -31,7 +31,7 @@ const scienceBtn = document.querySelector('#science-button')
 const randomBtn = document.querySelector('#random-button')
 const questionHolder = document.querySelector('#question-holder')
 const answerHolder = document.querySelector('#answer-holder')
-const lightMode = document.getElementById(".light-mode")
+const darkMode = document.getElementById(".dark-mode")
 let answerOne = document.querySelector('#answer-1')
 let answerTwo = document.querySelector('#answer-2')
 let answerThree = document.querySelector('#answer-3')
@@ -47,60 +47,60 @@ randomBtn.addEventListener('click', initRandomQuiz)
 answerOne.addEventListener('click', checkResponse)
 answerTwo.addEventListener('click', checkResponse)
 answerThree.addEventListener('click', checkResponse)
-// lightMode.addEventListener('click', change)
+// darkMode.addEventListener('click', change)
 
 /*-------------------------------- Functions --------------------------------*/
 
 function initMovieQuiz() {
     category = 'movie'
-    objectArray = getRandomMovieQuestion()
+    objectArray = getRandomMovieQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Movie Array.
 
 function initCodingQuiz() {
     category = 'coding'
-    objectArray = getRandomCodingQuestion()
+    objectArray = getRandomCodingQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Coding Array.
 
 function initHistoryQuiz() {
     category = 'history'
-    objectArray = getRandomHistoryQuestion()
+    objectArray = getRandomHistoryQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from History Array.
 
 function initScienceQuiz() {
     category = 'science'
-    objectArray = getRandomScienceQuestion()
+    objectArray = getRandomScienceQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Science Array.
 
 function initRandomQuiz() {
     category = 'random'
-    objectArray = getRandomQuestion()
+    objectArray = getRandomQuestion(questionsAnswered)
     render()
 } // This makes the logic for each of the buttons work. Pressing will return a question from Random Array.
 
 function checkResponse (e) {
     if (e.target.id === objectArray.answer) score += 10;
+    questionsAnswered++
     switch(category){
         case 'movie':
-            objectArray = getRandomMovieQuestion()
+            objectArray = getRandomMovieQuestion(questionsAnswered)
             break;
         case 'coding':
-            objectArray = getRandomCodingQuestion()
+            objectArray = getRandomCodingQuestion(questionsAnswered)
             break;
         case 'history':
-            objectArray = getRandomHistoryQuestion()
+            objectArray = getRandomHistoryQuestion(questionsAnswered)
             break;
         case 'science':
-            objectArray = getRandomScienceQuestion()
+            objectArray = getRandomScienceQuestion(questionsAnswered)
             break;
         case 'random':
-            objectArray = getRandomQuestion()
+            objectArray = getRandomQuestion(questionsAnswered)
             break;
     }
-    questionsAnswered++
     if (questionsAnswered == 10) {
         renderEndScreen()
     } else {
@@ -116,7 +116,7 @@ function render() {
     currentAnswers = objectArray.options
     answerHolder.innerHTML = `${currentAnswers}`
     console.log(score)
-    displayScore.innerHTML = `Score: ${score}` // This doesn't work...why?
+    displayScore.innerHTML = `Score: ${score}` // Gives real time score.
     // This will render the question as well as the answers for all categories.
 }
 
@@ -126,4 +126,6 @@ function renderEndScreen() {
     answerOne.style.display = "none"
     answerTwo.style.display = "none"
     answerThree.style.display = "none"
+    questionsAnswered = 0
+    displayScore.innerHTML = `Score: ${score}`
 }

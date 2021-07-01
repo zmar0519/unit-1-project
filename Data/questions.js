@@ -1,25 +1,53 @@
-function getRandomMovieQuestion() {
-    return movieTrivia[Math.floor(Math.random() * (movieTrivia.length - 1))] // This should generate a random movie question.
-}
-
-function getRandomCodingQuestion() {
-    return codingTrivia[Math.floor(Math.random() * (codingTrivia.length - 1))] // This should generate a random coding question.
-}
-
-function getRandomHistoryQuestion(question) {
-    return historyTrivia[Math.floor(Math.random() * (historyTrivia.length - 1))] // This should generate a random history question.
-}
-
-function getRandomScienceQuestion() {
-    return scienceTrivia[Math.floor(Math.random() * (scienceTrivia.length - 1))] // This should generate a random science question.
-}
-
-function getRandomQuestion() {
-    return randomTrivia[Math.floor(Math.random() * (scienceTrivia.length - 1))] // This should generate a random question from the large array
+/** REF: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+ * Shuffles array in place. ES6 version
+ * @param {Array} a items An array containing the items.
+ */
+ function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
 }
 
 
-const movieTrivia = [
+function getRandomMovieQuestion(questionsAnswered) { 
+    if (questionsAnswered === 0) {
+        movieTrivia = shuffle(movieTrivia)
+    }
+    return movieTrivia[questionsAnswered] // This should generate a random movie question.
+}
+
+function getRandomCodingQuestion(questionsAnswered) {
+    if (questionsAnswered === 0) {
+        codingTrivia = shuffle(codingTrivia)
+    }
+    return codingTrivia[questionsAnswered] // This should generate a random coding question.
+}
+
+function getRandomHistoryQuestion(questionsAnswered) {
+    if (questionsAnswered === 0) {
+        historyTrivia = shuffle(historyTrivia)
+    }
+    return historyTrivia[questionsAnswered] // This should generate a random coding question.
+}
+
+function getRandomScienceQuestion(questionsAnswered) {
+    if (questionsAnswered === 0) {
+        scienceTrivia = shuffle(scienceTrivia)
+    } console.log(questionsAnswered, scienceTrivia)
+    return scienceTrivia[questionsAnswered] // This should generate a random coding question.
+}
+
+function getRandomQuestion(questionsAnswered) {
+    if (questionsAnswered === 0) {
+        randomTrivia = shuffle(randomTrivia)
+    }
+    return randomTrivia[questionsAnswered] // This should generate a random coding question.
+}
+
+
+let movieTrivia = [
     {
         question: 'In the matrix does Neo take the blue pill or the red pill?',
         options: ['1. Red',' 2. Blue ',' 3. Neither'],
@@ -71,7 +99,7 @@ const movieTrivia = [
         answer: 'answer-2'}
 ] // Array of movie questions.
 
-const codingTrivia = [
+let codingTrivia = [
     {
         question: 'What year was the first computer virus created in?',
         options: ['1. 1976', ' 2. 1986', ' 3. 1991'],
@@ -123,7 +151,7 @@ const codingTrivia = [
         answer: 'answer-1'}
 ] // Array of coding questions.
 
-const historyTrivia = [
+let historyTrivia = [
     {
         question: 'What was the first sport played on the Moon?',
         options: ['1. Baseball', ' 2. Tennis', ' 3. Golf'],
@@ -175,7 +203,7 @@ const historyTrivia = [
         answer: 'answer-1'},    
 ] // Array of history question.
 
-const scienceTrivia = [
+let scienceTrivia = [
     {
         question: 'What is the second element on the periodic table?',
         options: ['1. Hydrogen', ' 2. Oxygen', ' 3. Helium'],
@@ -227,7 +255,7 @@ const scienceTrivia = [
         answer: 'answer-3'},    
 ] // Array of science questions.
 
-const randomTrivia = [
+let randomTrivia = [
     {
         question: 'In the matrix does Neo take the blue pill or the red pill?',
         options: ['1. Red',' 2. Blue ',' 3. Neither'],
