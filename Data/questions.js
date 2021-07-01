@@ -352,7 +352,7 @@ let randomTrivia = [
         answer: 'answer-3'},
     
     {
-        questions: 'Currently, what is the most popular coding language in the world according to GitHub?',
+        question: 'Currently, what is the most popular coding language in the world according to GitHub?',
         options: ['1. JavaScript', ' 2. Python', ' 3. Java'],
         answer: 'answer-1'},
     

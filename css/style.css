@@ -73,3 +73,9 @@ body.dark {
     justify-content: left;
     align-items: left;
 }
+
+#countdown {
+    text-align: center;
+    font-size: 20px;
+    
+}

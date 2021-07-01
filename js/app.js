@@ -36,6 +36,8 @@ let answerOne = document.querySelector('#answer-1')
 let answerTwo = document.querySelector('#answer-2')
 let answerThree = document.querySelector('#answer-3')
 let displayScore = document.getElementById('score')
+const endClap = new Audio("../audio/fox.mp3")
+let countdownEl = document.getElementById('countdown')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -118,6 +120,16 @@ function render() {
     console.log(score)
     displayScore.innerHTML = `Score: ${score}` // Gives real time score.
     // This will render the question as well as the answers for all categories.
+    let timeLeft = 100
+    let timer = setInterval(function(){
+    timeLeft -= 1
+    console.log(timeLeft)
+    countdownEl.textContent = `${timeLeft} seconds remaining.`
+    if (timeLeft < 1) {
+        renderEndScreen()
+        clearInterval(timer)
+    }
+    }, 1000)
 }
 
 function renderEndScreen() {
@@ -128,4 +140,5 @@ function renderEndScreen() {
     answerThree.style.display = "none"
     questionsAnswered = 0
     displayScore.innerHTML = `Score: ${score}`
+    endClap.play()
 }
