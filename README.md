@@ -4,7 +4,7 @@ Find the game available [here](https://trivia-mania.netlify.app/)
 
 ## Getting Started
 ### Background
-Quizes were invented in 1849 by Henry H. Quiz. Quiz was a descendant of Peter Test who famously invented the Test. Ever since then the quiz has had many different forms and thanks to the invention of the internet we can now take tests over the world-wide-web. Had it not been for the hard work of these founders the ability to play quiz games like this would not be possible.
+Quizes were invented in 1849 by Henry H. Quiz. Quiz was a descendant of Peter Test who famously invented the Test. Ever since then the quiz has had many different forms and thanks to the invention of the internet we can now take quizes or tests over the world-wide-web. Had it not been for the hard work of these founders the ability to play quiz games like this would not be possible.
 
 ### Instructions
 Trivia Mania will load and prompt you to select the category you would like to answer question in. Upon selecting a categroy a question will appear. Under the question you will have 3 potential answers with a single correct. Select the answer that you believe is correct and you will be prompted with the next question. A total of ten questions will appear per quiz. For each question that you get right you will be award 10 points for a total possible scrore of 100. Any wrong questions will not receive any points. Be Quick! You only have 100 seconds to answer all 10 questions. If you fail to answer all the questions within the 100 seconds you will automatically brought to the end screen and the score you have at that time will be the score you are stuck with!
