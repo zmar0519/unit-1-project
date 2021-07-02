@@ -60,7 +60,7 @@ function initMovieQuiz() {
     answerOne.style.display = ""
     answerTwo.style.display = ""
     answerThree.style.display = ""
-    let timeLeft = 100
+    let timeLeft = 10
     timer = setInterval(function(){
     timeLeft -= 1
     countdownEl.textContent = `${timeLeft} seconds remaining.`
