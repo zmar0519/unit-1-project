@@ -34,9 +34,9 @@ const answerOne = document.querySelector('#answer-1')
 const answerTwo = document.querySelector('#answer-2')
 const answerThree = document.querySelector('#answer-3')
 const displayScore = document.getElementById('score')
-const endClap = new Audio("../audio/clap.wav")
 const countdownEl = document.getElementById('countdown')
 const lightDarkBtn = document.querySelector("#light-dark-button")
+// const endClap = new Audio("../audio/clap.wav")
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -194,7 +194,6 @@ function renderEndScreen() {
     answerThree.style.display = "none"
     questionsAnswered = 0
     displayScore.innerHTML = `Score: ${score}`
-    endClap.play()
 }
 
 function renderLossScreen() {
